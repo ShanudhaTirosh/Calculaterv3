@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator with Handwriting Recognition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="switch-mode">
+        <button id="toggleMode">Switch to Handwriting</button>
+    </div>
+
+    <div class="calculator normal-mode">
+        <input type="text" id="display" disabled>
+        <div class="keys">
+            <button class="btn" data-value="1">1</button>
+            <button class="btn" data-value="2">2</button>
+            <button class="btn" data-value="3">3</button>
+            <button class="btn operator" data-value="+">+</button>
+            <button class="btn" data-value="4">4</button>
+            <button class="btn" data-value="5">5</button>
+            <button class="btn" data-value="6">6</button>
+            <button class="btn operator" data-value="-">-</button>
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="*">*</button>
+            <button class="btn" data-value="0">0</button>
+            <button class="btn" id="clear">C</button>
+            <button class="btn" id="equals">=</button>
+            <button class="btn operator" data-value="/">/</button>
+        </div>
+    </div>
+
+    <div class="calculator handwriting-mode hidden">
+        <input type="text" id="displayHandwriting" disabled>
+        <canvas id="mathCanvas" width="300" height="300"></canvas>
+        <div class="controls">
+            <button id="clearCanvas">Clear</button>
+            <button id="recognizeMath">Recognize</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
